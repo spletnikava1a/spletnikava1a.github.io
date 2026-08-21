@@ -1,0 +1,27 @@
+[
+  {
+    "id": "da2c23d6-c9b1-4f72-b099-b22a6f656e40",
+    "createdAt": "2026-08-12T14:00:30.785Z",
+    "content": "В общем и целом, учитывая, что я увидел, могу сказать, что, как обычно, взяли деньги, проинформировали о выполнении работы и спустя рукава сделали какую-то кулебяку.",
+    "by_nickname": "В.В. Путин",
+    "moderator": null,
+    "page": {
+      "id": "6af5c21e-abaa-42be-b884-009f6b6d5e95",
+      "slug": "https://spletnikavala.github.io/neirohruchevo-ot-himana/",
+      "url": "https://spletnikavala.github.io/neirohruchevo-ot-himana/",
+      "title": "",
+      "createdAt": "2026-08-12T14:00:30.680Z",
+      "updatedAt": "2026-08-12T14:00:30.680Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>В общем и целом, учитывая, что я увидел, могу сказать, что, как обычно, взяли деньги, проинформировали о выполнении работы и спустя рукава сделали какую-то кулебяку.</p>\n",
+    "parsedCreatedAt": "2026-08-12 14:00"
+  }
+]

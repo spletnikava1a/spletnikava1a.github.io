@@ -1,0 +1,52 @@
+[
+  {
+    "id": "3fd70986-4d21-4635-a0c3-8d1e6dfc73d4",
+    "createdAt": "2026-08-13T16:57:30.027Z",
+    "content": "Lol",
+    "by_nickname": "Milashka best",
+    "moderator": null,
+    "page": {
+      "id": "b9650c22-e4a5-49d9-811c-24e1e4ff89c7",
+      "slug": "https://spletnikavala.github.io/my-vernulis-vy-sosnuli/",
+      "url": "https://spletnikavala.github.io/my-vernulis-vy-sosnuli/",
+      "title": "Мы вернулись — вы соснули | Сплетни Кавалы",
+      "createdAt": "2026-08-13T12:46:32.593Z",
+      "updatedAt": "2026-08-13T12:46:32.593Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>Lol</p>\n",
+    "parsedCreatedAt": "2026-08-13 16:57"
+  },
+  {
+    "id": "535f4e90-3276-4815-9244-2805fed9e74f",
+    "createdAt": "2026-08-13T12:46:32.713Z",
+    "content": "Спасибо Оксане Шевченко за создание прекрасного сайта",
+    "by_nickname": "Aladdin Martyshkin",
+    "moderator": null,
+    "page": {
+      "id": "b9650c22-e4a5-49d9-811c-24e1e4ff89c7",
+      "slug": "https://spletnikavala.github.io/my-vernulis-vy-sosnuli/",
+      "url": "https://spletnikavala.github.io/my-vernulis-vy-sosnuli/",
+      "title": "Мы вернулись — вы соснули | Сплетни Кавалы",
+      "createdAt": "2026-08-13T12:46:32.593Z",
+      "updatedAt": "2026-08-13T12:46:32.593Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>Спасибо Оксане Шевченко за создание прекрасного сайта</p>\n",
+    "parsedCreatedAt": "2026-08-13 12:46"
+  }
+]

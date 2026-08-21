@@ -1,0 +1,27 @@
+[
+  {
+    "id": "ba1872af-2cfc-40b1-9c3a-b139362fcec8",
+    "createdAt": "2026-08-12T14:05:35.979Z",
+    "content": "Стоп?! Она не блодинка что ли от природы?",
+    "by_nickname": "Katrina",
+    "moderator": null,
+    "page": {
+      "id": "fad67608-67a7-44b3-b368-f74412f59401",
+      "slug": "https://spletnikavala.github.io/taini-oksani-shevchenko/",
+      "url": "https://spletnikavala.github.io/taini-oksani-shevchenko/",
+      "title": "",
+      "createdAt": "2026-08-12T14:05:35.859Z",
+      "updatedAt": "2026-08-12T14:05:35.859Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>Стоп?! Она не блодинка что ли от природы?</p>\n",
+    "parsedCreatedAt": "2026-08-12 14:05"
+  }
+]
