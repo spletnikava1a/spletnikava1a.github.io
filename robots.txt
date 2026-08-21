@@ -1,0 +1,2 @@
+User-Agent: *
+Sitemap: https://spletnikava1a.github.io/sitemap.xml
