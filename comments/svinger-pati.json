@@ -1,0 +1,77 @@
+[
+  {
+    "id": "ca85e60b-891f-4cf6-aaaf-b39a533ffc40",
+    "createdAt": "2026-08-12T14:05:22.002Z",
+    "content": "семавик и оземпик и всем не хватает....",
+    "by_nickname": "Alex Gorn",
+    "moderator": null,
+    "page": {
+      "id": "7708d11d-f0f0-41f8-bb08-25ec37f68c10",
+      "slug": "https://spletnikavala.github.io/svinger-pati/",
+      "url": "https://spletnikavala.github.io/svinger-pati/",
+      "title": "",
+      "createdAt": "2026-08-12T14:00:47.625Z",
+      "updatedAt": "2026-08-12T14:00:47.625Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>семавик и оземпик и всем не хватает....</p>\n",
+    "parsedCreatedAt": "2026-08-12 14:05"
+  },
+  {
+    "id": "b60ccb6a-5e8f-4ec0-b645-a847e889afe9",
+    "createdAt": "2026-08-12T14:00:51.724Z",
+    "content": "Почему все участники тусовки превышают 200 кг?",
+    "by_nickname": "promo: PDF",
+    "moderator": null,
+    "page": {
+      "id": "7708d11d-f0f0-41f8-bb08-25ec37f68c10",
+      "slug": "https://spletnikavala.github.io/svinger-pati/",
+      "url": "https://spletnikavala.github.io/svinger-pati/",
+      "title": "",
+      "createdAt": "2026-08-12T14:00:47.625Z",
+      "updatedAt": "2026-08-12T14:00:47.625Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>Почему все участники тусовки превышают 200 кг?</p>\n",
+    "parsedCreatedAt": "2026-08-12 14:00"
+  },
+  {
+    "id": "0bc35243-6360-4b3a-8e93-56d0239dafa5",
+    "createdAt": "2026-08-12T14:00:49.664Z",
+    "content": "По телосложению видно, кто любитель горнорудку пофармить….",
+    "by_nickname": "El Parasha",
+    "moderator": null,
+    "page": {
+      "id": "7708d11d-f0f0-41f8-bb08-25ec37f68c10",
+      "slug": "https://spletnikavala.github.io/svinger-pati/",
+      "url": "https://spletnikavala.github.io/svinger-pati/",
+      "title": "",
+      "createdAt": "2026-08-12T14:00:47.625Z",
+      "updatedAt": "2026-08-12T14:00:47.625Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>По телосложению видно, кто любитель горнорудку пофармить….</p>\n",
+    "parsedCreatedAt": "2026-08-12 14:00"
+  }
+]

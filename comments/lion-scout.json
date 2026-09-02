@@ -1,0 +1,27 @@
+[
+  {
+    "id": "0f7ff309-273f-4f87-bf2a-18c00773e29d",
+    "createdAt": "2026-08-12T14:00:59.457Z",
+    "content": "Когда я проходил службу в ГДР, я уже тогда понимал, что Европа сожрет и выплюнет любого русского человека, превратив его в марлока.",
+    "by_nickname": "В.В Путин",
+    "moderator": null,
+    "page": {
+      "id": "f6c7afa6-3c8e-4472-a853-55eaf6e6caec",
+      "slug": "https://spletnikavala.github.io/people/lion-scout/",
+      "url": "https://spletnikavala.github.io/people/lion-scout/",
+      "title": "",
+      "createdAt": "2026-08-12T14:00:59.323Z",
+      "updatedAt": "2026-08-12T14:00:59.323Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>Когда я проходил службу в ГДР, я уже тогда понимал, что Европа сожрет и выплюнет любого русского человека, превратив его в марлока.</p>\n",
+    "parsedCreatedAt": "2026-08-12 14:00"
+  }
+]

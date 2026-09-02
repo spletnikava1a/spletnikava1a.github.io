@@ -1,0 +1,27 @@
+[
+  {
+    "id": "41fd74b1-48de-45d3-901f-d146e8fbcb58",
+    "createdAt": "2026-08-12T14:05:01.733Z",
+    "content": "Какой кошмар твориться то! Все бы ничего если бы не детки! Как говорится дал бог зайку даст и лужайку, но это не об этом......",
+    "by_nickname": "Zvinomatka",
+    "moderator": null,
+    "page": {
+      "id": "71cf5384-866f-4c76-b24d-83093ad2bb56",
+      "slug": "https://spletnikavala.github.io/onas-govoryat/",
+      "url": "https://spletnikavala.github.io/onas-govoryat/",
+      "title": "",
+      "createdAt": "2026-08-12T14:00:33.298Z",
+      "updatedAt": "2026-08-12T14:00:33.298Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>Какой кошмар твориться то! Все бы ничего если бы не детки! Как говорится дал бог зайку даст и лужайку, но это не об этом......</p>\n",
+    "parsedCreatedAt": "2026-08-12 14:05"
+  }
+]
