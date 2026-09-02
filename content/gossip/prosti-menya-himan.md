@@ -22,4 +22,4 @@ cover = "images/gossip/himan-prosti-5.jpg"
 
 Знающие люди сразу усмотрели в этом скрытый намёк. Похоже, главный админ готовится к совсем другой жизни — по строгому распорядку.
 
-Подписывайтесь на наш Telegram-канал, чтобы не пропускать новые сплетни: [t.me/spletni_kavala](https://t.me/spleti_kavala)
+Подписывайтесь на наш Telegram-канал, чтобы не пропускать новые сплетни: [t.me/spletni_kavala](https://t.me/spletni_kavala)
