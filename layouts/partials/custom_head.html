@@ -46,6 +46,16 @@
 <script type="application/ld+json">
 {{ jsonify $article | safeJS }}
 </script>
+{{- else if (eq .Section "contest") -}}
+<script type="application/ld+json">
+{{ jsonify (dict
+  "@context" "https://schema.org"
+  "@type" "Event"
+  "name" .Title
+  "url" .Permalink
+  "description" $desc
+  "organizer" (dict "@type" "Organization" "name" .Site.Title)) | safeJS }}
+</script>
 {{- end -}}
 
 <link rel="alternate icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32.png" | relURL }}">

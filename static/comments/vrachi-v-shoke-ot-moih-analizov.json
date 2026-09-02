@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "id": "5d1a9a6e-1d92-487d-8c5c-c25df8f2e375",
+    "createdAt": "2026-08-24T18:52:26.861Z",
+    "content": "Считаю, что наказание достойное и должно было постичь подлеца, ставлю лайк данной сплетне!",
+    "by_nickname": "Аноним (Андрей)",
+    "moderator": null,
+    "page": {
+      "id": "bb74267b-a08d-4c10-9395-c79044b0238e",
+      "slug": "https://spletnikavala.github.io/vrachi-v-shoke-ot-moih-analizov/",
+      "url": "https://spletnikava1a.github.io/vrachi-v-shoke-ot-moih-analizov/",
+      "title": "ВРАЧИ В ШОКЕ ОТ МОИХ АНАЛИЗОВ! | Сплетни Кавалы",
+      "createdAt": "2026-08-24T18:52:26.741Z",
+      "updatedAt": "2026-08-24T18:52:26.741Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>Считаю, что наказание достойное и должно было постичь подлеца, ставлю лайк данной сплетне!</p>\n",
+    "parsedCreatedAt": "2026-08-24 18:52"
+  }
+]

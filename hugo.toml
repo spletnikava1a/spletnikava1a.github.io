@@ -11,6 +11,7 @@ disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 [permalinks]
   gossip = "/:slug/"
+  contest = "/:slug/"
   tags = "/gossip/:slug"
 
 [params]
@@ -34,6 +35,11 @@ ignoreErrors = ["error-disable-taxonomy"]
   name = "Лица"
   url = "/people/"
   weight = 3
+
+[[menu.main]]
+  name = "Конкурс красоты"
+  url = "/contest/"
+  weight = 4
 
 [markup]
   [markup.goldmark]

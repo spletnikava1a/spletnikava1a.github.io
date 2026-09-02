@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "id": "1d766ba4-bb8e-4d97-86b5-4ad7d70b9c5e",
+    "createdAt": "2026-08-24T21:47:15.411Z",
+    "content": "Во дура оксанка",
+    "by_nickname": "Япидо",
+    "moderator": null,
+    "page": {
+      "id": "aea56593-b7bb-4aaa-8a9a-d904397dbf13",
+      "slug": "https://spletnikavala.github.io/psihushka-po-raspisaniyu/",
+      "url": "https://spletnikava1a.github.io/psihushka-po-raspisaniyu/",
+      "title": "Психушка по расписанию | Сплетни Кавалы",
+      "createdAt": "2026-08-24T21:47:13.334Z",
+      "updatedAt": "2026-08-24T21:47:13.334Z",
+      "projectId": "51504f4c-94cd-490b-b853-f0497a8a4044"
+    },
+    "moderatorId": null,
+    "replies": {
+      "data": [],
+      "commentCount": 0,
+      "pageSize": 100,
+      "pageCount": 1
+    },
+    "parsedContent": "<p>Во дура оксанка</p>\n",
+    "parsedCreatedAt": "2026-08-24 21:47"
+  }
+]

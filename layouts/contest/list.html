@@ -1,0 +1,157 @@
+{{ define "title" }}Конкурс Красоты | Сплетни Кавалы{{ end }}
+{{ define "main" }}
+<link rel="stylesheet" href="{{ "magazine.css" | relURL }}">
+
+<section class="contest-page">
+  <div class="contest-header">
+    <h1 class="contest-title">Конкурс красоты среди мужчин Amazing</h1>
+    <p class="contest-subtitle">Отдай свое сердце самому красивому жителю Amazing!</p>
+    <p class="contest-rules">Можно отдать сердце только одному участнику. Выбор менять нельзя — выбирай своего единственного!</p>
+  </div>
+
+  <div class="contest-grid">
+    {{ range $i, $p := site.Data.contest }}
+    <div class="contest-card" data-id="{{ $p.id }}">
+      <div class="contest-card-photos">
+        {{ if $p.gallery }}
+        <div class="contest-carousel" data-count="{{ add (len $p.gallery) 1 }}">
+          <img class="contest-card-main" src="{{ $p.photo | relURL }}" alt="{{ $p.name }}" loading="lazy">
+          {{ range $p.gallery }}
+          <img class="contest-card-main" src="{{ . | relURL }}" alt="{{ $p.name }}" loading="lazy">
+          {{ end }}
+        </div>
+        <div class="contest-dots">
+          {{ $total := add (len $p.gallery) 1 }}
+          {{ range $j := seq $total }}
+          <span class="contest-dot{{ if eq $j 1 }} active{{ end }}" data-idx="{{ sub $j 1 }}"></span>
+          {{ end }}
+        </div>
+        <button class="contest-arrow contest-arrow-prev" type="button" aria-label="Назад">‹</button>
+        <button class="contest-arrow contest-arrow-next" type="button" aria-label="Вперёд">›</button>
+        {{ else }}
+        <img class="contest-card-main" src="{{ $p.photo | relURL }}" alt="{{ $p.name }}" loading="lazy">
+        {{ end }}
+      </div>
+      <div class="contest-card-info">
+        <h2 class="contest-card-name">{{ $p.name }}</h2>
+        <p class="contest-card-desc">{{ $p.description | safeHTML }}</p>
+        <button class="contest-vote-btn" type="button" data-id="{{ $p.id }}">
+          <span class="contest-vote-heart">♥</span>
+          <span class="contest-vote-text">Отдать свое сердце</span>
+          <span class="contest-vote-count">0</span>
+        </button>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="contest-leaderboard">
+    <h2>Все участники</h2>
+    <div id="contest-leaderboard-list"></div>
+  </div>
+
+  {{ partial "comments.html" (dict "pageid" .Permalink) }}
+</section>
+
+<script>
+(function(){
+  // Center last card if alone in its row
+  function checkCenter(){
+    var grid=document.querySelector('.contest-grid');
+    var cards=grid.querySelectorAll('.contest-card');
+    grid.classList.remove('single-last');
+    if(cards.length>1){
+      var last=cards[cards.length-1];
+      var prev=cards[cards.length-2];
+      var lastRow=last.getBoundingClientRect().top;
+      var prevRow=prev.getBoundingClientRect().top;
+      if(Math.abs(prevRow-lastRow)>10){
+        grid.classList.add('single-last');
+      }
+    }
+  }
+  checkCenter();
+  window.addEventListener('resize',checkCenter);
+  window.addEventListener('load',checkCenter);
+
+  // Carousel navigation
+  document.querySelectorAll('.contest-carousel').forEach(function(carousel){
+    var parent=carousel.closest('.contest-card-photos');
+    var dots=parent.querySelectorAll('.contest-dot');
+    var prev=parent.querySelector('.contest-arrow-prev');
+    var next=parent.querySelector('.contest-arrow-next');
+    if(!dots.length) return;
+    carousel.addEventListener('scroll',function(){
+      var idx=Math.round(carousel.scrollLeft/carousel.clientWidth);
+      dots.forEach(function(d,i){ d.classList.toggle('active',i===idx); });
+    });
+    dots.forEach(function(dot){
+      dot.addEventListener('click',function(){
+        var idx=parseInt(dot.getAttribute('data-idx'));
+        carousel.scrollTo({left:idx*carousel.clientWidth,behavior:'smooth'});
+      });
+    });
+    if(prev) prev.addEventListener('click',function(){
+      var idx=Math.round(carousel.scrollLeft/carousel.clientWidth);
+      var total=carousel.querySelectorAll('.contest-card-main').length;
+      var newIdx=idx>0?idx-1:total-1;
+      carousel.scrollTo({left:newIdx*carousel.clientWidth,behavior:'smooth'});
+    });
+    if(next) next.addEventListener('click',function(){
+      var idx=Math.round(carousel.scrollLeft/carousel.clientWidth);
+      var total=carousel.querySelectorAll('.contest-card-main').length;
+      var newIdx=idx<total-1?idx+1:0;
+      carousel.scrollTo({left:newIdx*carousel.clientWidth,behavior:'smooth'});
+    });
+  });
+
+  var API='https://abacus.jasoncameron.dev', NS='spletni-kavala-contest';
+  var cards=document.querySelectorAll('.contest-card');
+  var voted=localStorage.getItem('beauty_contest_voted');
+  var leaderboard=document.getElementById('contest-leaderboard-list');
+
+  // Load all counts
+  var results=[];
+  cards.forEach(function(card){
+    var id=card.getAttribute('data-id');
+    var btn=card.querySelector('.contest-vote-btn');
+    var countEl=card.querySelector('.contest-vote-count');
+    var key=id+'-vote';
+
+    if(voted===id) btn.classList.add('voted');
+
+    fetch(API+'/get/'+NS+'/'+encodeURIComponent(key))
+      .then(function(r){return r.json();})
+      .then(function(d){
+        var c=(d&&typeof d.value==='number')?d.value:0;
+        countEl.textContent=c;
+        results.push({id:id, name:card.querySelector('.contest-card-name').textContent, count:c});
+        updateLeaderboard();
+      }).catch(function(){});
+
+    btn.addEventListener('click',function(){
+      if(voted) return;
+      if(voted===id) return;
+      localStorage.setItem('beauty_contest_voted',id);
+      voted=id;
+      btn.classList.add('voted');
+      countEl.textContent=(parseInt(countEl.textContent||'0',10)+1);
+      fetch(API+'/hit/'+NS+'/'+encodeURIComponent(key))
+        .then(function(r){return r.json();})
+        .then(function(d){
+          if(d&&typeof d.value==='number') countEl.textContent=d.value;
+          results=results.map(function(r){return r.id===id?{id:id,name:r.name,count:d.value}:r;});
+          updateLeaderboard();
+        }).catch(function(){});
+    });
+  });
+
+  function updateLeaderboard(){
+    results.sort(function(a,b){return b.count-a.count;});
+    leaderboard.innerHTML=results.map(function(r,i){
+      return '<div class="lb-row'+(r.id===voted?' lb-mine':'')+'">'+(i+1)+'. '+r.name+' — <strong>'+r.count+'</strong> голосов</div>';
+    }).join('');
+  }
+})();
+</script>
+{{ end }}

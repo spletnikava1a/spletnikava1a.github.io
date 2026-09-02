@@ -12,8 +12,8 @@
 </div>
 <script>
 (function() {
-  var APP_ID = '51504f4c-94cd-490b-b853-f0497a8a4044';
-  var PAGE_ID = '{{ .pageid }}';
+  var APP_ID = '40256950-4f8f-4671-8e45-afb7ea4c7378';
+  var PAGE_ID = '{{ .pageid }}'.replace('spletnikava1a.github.io', 'spletnikavala.github.io');
   var API = 'https://cusdis.com';
 
   function getSlug() {
@@ -38,7 +38,7 @@
 
   function fmtDate(s) {
     if (!s) return '';
-    var p = s.match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
+    var p = s.match(/(\d{4})-(\d{2})-(\d{2})[T\s]+(\d{2}):(\d{2})/);
     if (!p) return esc(s);
     var months = ['янв','фев','мар','апр','мая','июн','июл','авг','сен','окт','ноя','дек'];
     return p[3].replace(/^0/,'') + ' ' + months[parseInt(p[2],10)-1] + ' ' + p[1];
@@ -53,14 +53,14 @@
         var rAuthor = (r.moderator && r.moderator.displayName) ? esc(r.moderator.displayName) : esc(r.by_nickname);
         var rMod = r.moderatorId ? ' <span class="cusdis-mod">МОД</span>' : '';
         return '<div class="cusdis-reply">' +
-          '<div class="cusdis-meta">' + rAuthor + rMod + ' · ' + fmtDate(r.parsedCreatedAt) + '</div>' +
-          '<div class="cusdis-body">' + r.parsedContent + '</div>' +
+          '<div class="cusdis-meta">' + rAuthor + rMod + ' · ' + fmtDate(r.createdAt) + '</div>' +
+          '<div class="cusdis-body">' + esc(r.content) + '</div>' +
         '</div>';
       }).join('') + '</div>';
     }
     return '<div class="cusdis-comment">' +
-      '<div class="cusdis-meta">' + author + modBadge + ' · ' + fmtDate(c.parsedCreatedAt) + '</div>' +
-      '<div class="cusdis-body">' + c.parsedContent + '</div>' +
+      '<div class="cusdis-meta">' + author + modBadge + ' · ' + fmtDate(c.createdAt) + '</div>' +
+      '<div class="cusdis-body">' + esc(c.content) + '</div>' +
       replies +
     '</div>';
   }

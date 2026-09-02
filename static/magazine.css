@@ -587,3 +587,328 @@ body {
     box-sizing: border-box;
   }
 }
+
+/* ---- Disclaimer footer ---- */
+.site-disclaimer {
+  max-width: 680px;
+  margin: 60px auto 0;
+  padding: 20px;
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  color: #a07aa0;
+  border-top: 1px solid #e8d5e0;
+  background: transparent;
+}
+
+@media (max-width: 560px) {
+  .site-disclaimer {
+    margin: 45px 12px 0;
+    font-size: 0.82em;
+  }
+}
+
+/* ============================================================
+   CONTEST — Конкурс Красоты
+   ============================================================ */
+
+/* ---- Gossip list: contest card ---- */
+.gtile--contest {
+  border: 2px solid #c86ab0;
+  background: linear-gradient(135deg, #fef6fb 0%, #f8e8f4 100%);
+  position: relative;
+}
+.gtile--contest::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c86ab0, #e8a0d6, #c86ab0);
+}
+.gtile-cover--contest {
+  height: 100px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8d0e8 0%, #e8b0d6 50%, #d8a0c6 100%);
+  font-size: 3em;
+}
+.gtile-tag {
+  display: inline-block;
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #c86ab0;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+/* ---- Contest page ---- */
+.contest-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.contest-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contest-title {
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 2em;
+  color: #5a1349;
+  margin: 0 0 10px;
+}
+.contest-subtitle {
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 1.15em;
+  color: #a12f86;
+  margin: 0 0 8px;
+}
+.contest-rules {
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 0.85em;
+  color: #a07aa0;
+  margin: 0;
+}
+
+/* ---- Grid ---- */
+.contest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  margin-bottom: 50px;
+}
+.contest-grid.single-last .contest-card:last-child {
+  justify-self: center;
+}
+
+/* ---- Card ---- */
+.contest-card {
+  background: #fff;
+  border: 1px solid #e6d7e5;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.25s, transform 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+.contest-card:hover {
+  box-shadow: 0 12px 32px rgba(90, 20, 73, 0.14);
+  transform: translateY(-4px);
+}
+
+.contest-card-photos {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+.contest-card-main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ---- Carousel ---- */
+.contest-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 2px;
+  height: 100%;
+}
+.contest-carousel::-webkit-scrollbar { display: none; }
+.contest-carousel .contest-card-main {
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---- Dots (TikTok-style, over photo) ---- */
+.contest-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  z-index: 3;
+  pointer-events: none;
+}
+.contest-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  transition: all 0.2s;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.contest-dot.active {
+  width: 16px;
+  border-radius: 3px;
+  background: #fff;
+}
+.contest-dot.active {
+  background: #c86ab0;
+}
+
+/* ---- Arrows ---- */
+.contest-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  color: #5a1349;
+  font-size: 1.4em;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contest-arrow:hover { background: #fff; }
+.contest-arrow-prev { left: 8px; }
+.contest-arrow-next { right: 8px; }
+
+.contest-card-info {
+  padding: 8px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.contest-card-name {
+  font-family: 'Play', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+  color: #2f2d2f;
+  margin: 0 0 4px;
+}
+.contest-card-title {
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 0.9em;
+  color: #c86ab0;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.contest-card-desc {
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 0.88em;
+  line-height: 1.5;
+  color: #6b5a68;
+  margin: 0 0 10px;
+}
+.contest-card-stats {
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 0.78em;
+  color: #a07aa0;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Vote button ---- */
+.contest-vote-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #c86ab0;
+  border-radius: 8px;
+  background: #fff;
+  color: #c86ab0;
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: auto;
+}
+.contest-vote-btn:hover {
+  background: #c86ab0;
+  color: #fff;
+}
+.contest-vote-btn.voted {
+  background: #e8d0e4;
+  border-color: #e8d0e4;
+  color: #5a1349;
+  cursor: default;
+}
+.contest-vote-heart {
+  font-size: 1.2em;
+}
+.contest-vote-count {
+  margin-left: auto;
+  background: rgba(200,106,176,0.15);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.85em;
+}
+.contest-vote-btn.voted .contest-vote-count {
+  background: rgba(90,20,73,0.12);
+}
+
+/* ---- Leaderboard ---- */
+.contest-leaderboard {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contest-leaderboard h2 {
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 1.3em;
+  color: #5a1349;
+  margin-bottom: 16px;
+}
+.lb-row {
+  font-family: 'Play', Arial, sans-serif;
+  font-size: 0.95em;
+  color: #2f2d2f;
+  padding: 8px 14px;
+  border-bottom: 1px solid #f0e4ee;
+}
+.lb-mine {
+  background: #fef0fa;
+  font-weight: 700;
+  color: #a12f86;
+}
+
+@media (max-width: 560px) {
+  .contest-page { padding: 12px; }
+  .contest-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .contest-title { font-size: 1.3em; }
+  .contest-subtitle { font-size: 1em; }
+  .contest-header { margin-bottom: 24px; }
+  .contest-card-photos { aspect-ratio: 1/1; }
+  .contest-card-info { padding: 8px 14px 16px; }
+  .contest-card-name { font-size: 1.15em; }
+  .contest-vote-btn { font-size: 0.95em; padding: 10px 14px; }
+  .contest-arrow { width: 30px; height: 30px; font-size: 1.2em; }
+  .contest-arrow-prev { left: 6px; }
+  .contest-arrow-next { right: 6px; }
+  .contest-leaderboard h2 { font-size: 1.1em; }
+  .lb-row { font-size: 0.9em; }
+}

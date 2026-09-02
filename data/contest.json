@@ -1,0 +1,129 @@
+[
+  {
+    "id": "participant-4",
+    "name": "Samuel",
+    "description": "Администратор и стример острова Amazing.<br>Ранее 160-килограммовый кабан.",
+    "photo": "images/contest/samuel-1.jpg",
+    "gallery": [
+      "images/contest/samuel-2.png",
+      "images/contest/samuel-3.jpg"
+    ]
+  },
+  {
+    "id": "participant-1",
+    "name": "Paul Streamer",
+    "description": "Маленький стример острова Амазинг.",
+    "photo": "images/contest/pavel.jpg",
+    "gallery": [
+      "images/contest/pavel-3.png",
+      "images/contest/pavel-4.png"
+    ]
+  },
+  {
+    "id": "participant-9",
+    "name": "Roman Kovalskey",
+    "description": "Местный фармила.",
+    "photo": "images/contest/roman-1.jpg",
+    "gallery": [
+      "images/contest/roman-2.jpg",
+      "images/contest/roman-3.jpg",
+      "images/contest/roman-4.jpg"
+    ]
+  },
+  {
+    "id": "participant-3",
+    "name": "Ilya Larinov",
+    "description": "Оборотень в погонах.",
+    "photo": "images/contest/ilya-1.jpg",
+    "gallery": [
+      "images/contest/ilya-2.jpg",
+      "images/contest/ilya-3.jpg",
+      "images/contest/ilya-5.jpg",
+      "images/contest/ilya-6.jpg",
+      "images/contest/ilya-7.jpg",
+      "images/contest/ilya-8.jpg"
+    ]
+  },
+  {
+    "id": "participant-7",
+    "name": "Pivandro Carter",
+    "description": "Малоизвестный стример острова Амазинг.",
+    "photo": "images/contest/pivandro-1.jpg",
+    "gallery": [
+      "images/contest/pivandro-2.jpg",
+      "images/contest/pivandro-3.jpg",
+      "images/contest/pivandro-4.jpg"
+    ]
+  },
+  {
+    "id": "participant-8",
+    "name": "Kostik Shanxai",
+    "description": "Местный пьянчушка.",
+    "photo": "images/contest/kostik-1.jpg",
+    "gallery": [
+      "images/contest/kostik-2.jpg",
+      "images/contest/kostik-3.jpg"
+    ]
+  },
+  {
+    "id": "participant-10",
+    "name": "Aladdin Martyshkin",
+    "description": "Народный стример острова.",
+    "photo": "images/contest/aladdin-1.jpg",
+    "gallery": [
+      "images/contest/aladdin-2.jpg",
+      "images/contest/aladdin-3.jpg",
+      "images/contest/aladdin-4.jpg",
+      "images/contest/aladdin-5.jpg",
+      "images/contest/aladdin-6.jpg"
+    ]
+  },
+  {
+    "id": "participant-11",
+    "name": "Polear Polyarovich",
+    "description": "Мой друг.",
+    "photo": "images/contest/polear-1.png",
+    "gallery": [
+      "images/contest/polear-2.png",
+      "images/contest/polear-3.jpg"
+    ]
+  },
+  {
+    "id": "participant-2",
+    "name": "Efeomer",
+    "description": "Местный старожил.",
+    "photo": "images/contest/efeomer.jpg",
+    "gallery": [
+      "images/contest/efeomer-new.jpg",
+      "images/contest/efeomer-4.jpg"
+    ]
+  },
+  {
+    "id": "participant-6",
+    "name": "Rick Ross",
+    "description": "Администратор острова Амазинг.",
+    "photo": "images/contest/rick-ross-1.jpg",
+    "gallery": [
+      "images/contest/rick-ross-2.jpg",
+      "images/contest/rick-ross-3.jpg",
+      "images/contest/rick-ross-4.png"
+    ]
+  },
+  {
+    "id": "participant-5",
+    "name": "Vanek Love",
+    "description": "Главный нытик острова.",
+    "photo": "images/contest/vanek.jpg",
+    "gallery": [
+      "images/contest/vanek-2.jpg",
+      "images/contest/vanek-3.jpg"
+    ]
+  },
+  {
+    "id": "participant-12",
+    "name": "Roman Grigorich",
+    "description": "Оборотень в погонах.",
+    "photo": "images/contest/roman-grigorich-1.png",
+    "gallery": []
+  }
+]
